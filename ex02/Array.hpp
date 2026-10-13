@@ -1,7 +1,9 @@
-#ifndef ARRAY_HPP
-#define ARRAY_HPP
+#pragma once
 
-#include <iostream>
+#include <cstddef>
+#include <exception>
+#include <stdexcept>
+
 
 template <typename T>
 class Array
@@ -9,18 +11,16 @@ class Array
     public:
         Array();
         Array(unsigned int n);
-        Array(Array &other);
-        Array &operator=(Array &other);
-        T &operator[](size_t index);
-        const T &operator[](size_t index) const;
-        unsigned int size();
+        Array(const Array &other);
+        Array &operator=(const Array &other);
+        T &operator[](unsigned int index);
+        const T &operator[](unsigned int index) const;
+        unsigned int size() const;
         ~Array();
 
     private:
         T *_items;
-        size_t _num;
+        unsigned int _num;
 };
 
 #include "Array.tpp"
-
-#endif

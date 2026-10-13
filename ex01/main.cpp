@@ -1,5 +1,7 @@
 #include "iter.hpp"
 #include <string>
+#include <iostream>
+
 
 void printit(const char &c)
 {

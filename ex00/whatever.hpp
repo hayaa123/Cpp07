@@ -1,7 +1,4 @@
-#ifndef WHATEVER_HPP
-# define WHATEVER_HPP
-
-#include <iostream>
+#pragma once
 
 template <typename T>
 void swap(T &value1,T &value2)
@@ -14,7 +11,7 @@ void swap(T &value1,T &value2)
 }
 
 template <typename T>
-T min(T value1,T value2)
+T min(const T value1,const T value2)
 {
     if(value1 < value2)
         return (value1);
@@ -22,11 +19,9 @@ T min(T value1,T value2)
 }
 
 template <typename T>
-T max(T value1,T value2)
+T max(const T value1, const T value2)
 {
     if(value1 > value2)
         return (value1);
     return (value2);
 }
-
-#endif
